@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title #{@header_title}
+    = csrf_meta_tags
+    = csp_meta_tag
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "#{image_url('apple-touch-icon.png')}", :rel => "apple-touch-icon", :sizes => "180x180"}/
+    %link{:href => "#{image_url('favicon-32x32.png')}", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
+    %link{:href => "#{image_url('favicon-16x16.png')}", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %link{:href => "#{image_url('site.webmanifest')}", :rel => "manifest"}/
+    %link{href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", rel: "stylesheet", integrity: "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", crossorigin: "anonymous"}
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    %script{:crossorigin => "anonymous", :integrity => "sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=", :src => "https://code.jquery.com/jquery-3.4.1.slim.min.js"}
+    %script{src: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", integrity: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", crossorigin: "anonymous"}
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'layouts/topbar'
+    = render 'layouts/navbar'
+    .mt-4
+    = yield
+    .mt-4
+    = render 'layouts/footer'

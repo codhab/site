@@ -1,0 +1,42 @@
+@import 'variables'; 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700&display=swap');
+
+html,body {
+  height: 100%;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#topbar {
+  background-color: $codhab-blue;
+  height: 40px;
+}
+
+#topbar a {
+  color: white;
+}
+
+#navbar {
+  background-color: #fff;
+  box-shadow: 0px 0px 2px #b1b1b1
+}
+
+#footer {
+  background-color: $codhab-blue;
+  color: white;
+  position: relative;
+  bottom: 0;
+}
+
+#iframe-content .card-body {
+  min-height: 600px;
+}
+
+/* botoes */
+
+.btn-success {
+  background-color: $codhab-green;
+}
